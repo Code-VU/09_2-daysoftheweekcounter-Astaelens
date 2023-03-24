@@ -8,10 +8,7 @@ def countDayOfTheWeek():
         if line.startswith('From '):
             word=line.split()
             #print(word)
-            if word[2] not in counter:
-                counter[word[2]]=1
-            else:
-                counter[word[2]]+=1
+            counter[word[2]]=counter.get(word[2],0)+1
 
     print(counter)
 
